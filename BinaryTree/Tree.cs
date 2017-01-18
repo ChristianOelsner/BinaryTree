@@ -23,11 +23,10 @@ namespace BinaryTree
         public void Insert(T item)
         {
             T currentNodeValue = this.NodeData;
-
             if (currentNodeValue.CompareTo(item) > 0)
             {
-                //Insert into the left subtree
-                if(this.LeftTree == null)
+                // Insert the item into the left subtree
+                if (this.LeftTree == null)
                 {
                     this.LeftTree = new Tree<T>(item);
                 }
@@ -38,8 +37,8 @@ namespace BinaryTree
             }
             else
             {
-                //Insert into the right subtree
-                if(this.RightTree == null)
+                // Insert the new item into the right subtree
+                if (this.RightTree == null)
                 {
                     this.RightTree = new Tree<T>(item);
                 }
@@ -63,9 +62,9 @@ namespace BinaryTree
             
             if(this.RightTree != null)
             {
-                result = this.RightTree.Traverse();
+                result += this.RightTree.Traverse();
             }
             return result;
-        }
+        }        
     }
 }
