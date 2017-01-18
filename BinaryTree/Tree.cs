@@ -50,5 +50,22 @@ namespace BinaryTree
             }
         }
 
+        public string Traverse()
+        {
+            string result = "";
+
+            if(this.LeftTree != null)
+            {
+                result = this.LeftTree.Traverse();
+            }
+
+            result += $" {this.NodeData.ToString()} ";
+            
+            if(this.RightTree != null)
+            {
+                result = this.RightTree.Traverse();
+            }
+            return result;
+        }
     }
 }

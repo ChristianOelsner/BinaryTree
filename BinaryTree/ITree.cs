@@ -13,5 +13,11 @@ namespace BinaryTree
         /// </summary>
         /// <param name="item"></param>
         void Insert(T item);
+
+        /// <summary>
+        /// Traverses the tree, visiting each node in sequence
+        /// </summary>
+        /// <returns>A string representation of each node visited</returns>
+        string Traverse();
     }
 }
